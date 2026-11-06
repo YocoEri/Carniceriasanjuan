@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Carnicería San Juan</title>
+
+  <!-- fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- estilos generales y específicos de nosotros -->
+  <link rel="stylesheet" href="css/gonzalo.css">
+  <link rel="stylesheet" href="css/nosotros.css">
+</head>
+<body>
+
+  <!-- menu de navegacion -->
+  <header class="encabezado">
+    <div class="contenedor contenedor-navegacion">
+      <div class="marca">
+        <div class="icono-logo">
+          <i class="fa-solid fa-shield"></i>
+        </div>
+        <div class="texto-marca">
+          <h1>SAN JUAN</h1>
+          <span>CARNICERÍA</span>
+        </div>
+      </div>
+
+      <nav>
+        <ul class="enlaces-navegacion">
+          <li><a href="index.php" class="activo">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.php">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          
+          <?php if ($esAdmin): ?>
+              <li><a href="Altabasbajas.html" style="color: var(--fondo-dorado, #d4af37);">Panel Admin</a></li>
+          <?php endif; ?>
+        </ul>
+      </nav>
+
+      <a href="tel:4499123456" class="boton-telefono">
+        <i class="fa-solid fa-phone"></i> (449) 912-3456
+      </a>
+    </div>
+  </header>
+
+  <!-- banner principal nosotros -->
+  <section class="banner-nosotros">
+    <div class="contenedor">
+      <span class="etiqueta-subtitulo">— NUESTRAS RAÍCES</span>
+      <h1 class="titulo-principal-nosotros">Nuestra Historia</h1>
+    </div>
+  </section>
+
+  <!-- seccion historia -->
+  <section class="seccion-historia">
+    <div class="contenedor cuadricula-historia">
+      <div class="imagen-historia">
+        <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=800&q=80" alt="Maestro Carnicero San Juan">
+      </div>
+      <div class="contenido-historia">
+        <span class="etiqueta-subtitulo-roja">MÁS DE 25 AÑOS DE PASIÓN</span>
+        <h2>Fundada en 1998 por la familia Saucedo</h2>
+        <p>
+          Nuestra historia comienza con el sueño de ofrecer un servicio de carnicería diferente en Aguascalientes. Un lugar donde la calidad excepcional y la calidez del trato familiar se encontraran bajo un mismo techo. Don Andrés Saucedo y su familia iniciaron este camino seleccionando personalmente los mejores ganados de la región.
+        </p>
+        <p>
+          Con el paso de los años, nos hemos convertido en un referente de confianza en nuestra comunidad. Fieles a nuestro legado, hoy en día combinamos las técnicas artesanales tradicionales con las normas más estrictas de higiene, asegurando la frescura absoluta en cada compra.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- seccion mision y vision -->
+  <section class="seccion-mision-vision">
+    <div class="contenedor cuadricula-2-columnas">
+      <div class="tarjeta-mision-vision">
+        <div class="icono-mision"><i class="fa-solid fa-bullseye"></i></div>
+        <h3>Misión</h3>
+        <p>
+          Ofrecer productos cárnicos de la más alta calidad, con un servicio cercano y personalizado. Nos comprometemos a mantener la frescura diaria, la higiene impecable y un comercio honesto que nutra a las familias de nuestra comunidad.
+        </p>
+      </div>
+
+      <div class="tarjeta-mision-vision">
+        <div class="icono-mision"><i class="fa-solid fa-eye"></i></div>
+        <h3>Visión</h3>
+        <p>
+          Ser la carnicería de confianza preferida por las familias de nuestra comunidad, reconocida por la excelencia consistente de nuestros productos artesanales, la innovación en la experiencia de servicio y nuestro compromiso inquebrantable con la tradición.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- seccion nuestros valores -->
+  <section class="seccion-valores">
+    <div class="contenedor">
+      <div class="encabezado-seccion">
+        <span class="subtitulo-superior">NUESTROS PILARES</span>
+        <h2 class="titulo-seccion">Nuestros Valores</h2>
+        <p class="descripcion-seccion">
+          Rigen cada acción que tomamos, desde la recepción de la materia prima hasta la entrega del corte en sus manos.
+        </p>
+        <div class="barra-separadora"></div>
+      </div>
+
+      <div class="cuadricula-4-columnas">
+        <div class="tarjeta-valor">
+          <div class="icono-valor-rojo"><i class="fa-solid fa-shield-halved"></i></div>
+          <h4>Calidad</h4>
+          <p>Selección minuciosa para asegurar que solo lo mejor llegue a su hogar.</p>
+        </div>
+
+        <div class="tarjeta-valor">
+          <div class="icono-valor-rojo"><i class="fa-solid fa-drumstick-bite"></i></div>
+          <h4>Frescura</h4>
+          <p>Procesamiento diario riguroso para mantener el sabor y textura óptimos.</p>
+        </div>
+
+        <div class="tarjeta-valor">
+          <div class="icono-valor-rojo"><i class="fa-solid fa-handshake"></i></div>
+          <h4>Honestidad</h4>
+          <p>Pesos exactos y transparencia absoluta en precios y procedencia.</p>
+        </div>
+
+        <div class="tarjeta-valor">
+          <div class="icono-valor-rojo"><i class="fa-solid fa-users"></i></div>
+          <h4>Servicio</h4>
+          <p>Atención atenta, cercana y familiar que entiende sus preferencias.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- seccion nuestro equipo -->
+  <section class="seccion-equipo">
+    <div class="contenedor">
+      <div class="encabezado-seccion">
+        <span class="subtitulo-superior">RESPALDO PROFESIONAL</span>
+        <h2 class="titulo-seccion">Nuestro Equipo</h2>
+        <p class="descripcion-seccion">
+          Profesionales apasionados del corte y la atención dispuestos a brindarle la mejor recomendación culinaria.
+        </p>
+        <div class="barra-separadora"></div>
+      </div>
+
+      <div class="cuadricula-4-columnas">
+        <div class="tarjeta-beneficio-limpia">
+          <div class="icono-beneficio"><i class="fa-solid fa-circle-check"></i></div>
+          <h4>Calidad Garantizada</h4>
+          <p>Selección rigurosa de proveedores nacionales certificados.</p>
+        </div>
+
+        <div class="tarjeta-beneficio-limpia">
+          <div class="icono-beneficio"><i class="fa-solid fa-drumstick-bite"></i></div>
+          <h4>Cortes Frescos Diario</h4>
+          <p>Nuestros maestros carniceros preparan la carne cada mañana.</p>
+        </div>
+
+        <div class="tarjeta-beneficio-limpia">
+          <div class="icono-beneficio"><i class="fa-solid fa-user"></i></div>
+          <h4>Atención Personalizada</h4>
+          <p>Cortamos la pieza exactamente al grosor de su preferencia.</p>
+        </div>
+
+        <div class="tarjeta-beneficio-limpia">
+          <div class="icono-beneficio"><i class="fa-solid fa-scale-balanced"></i></div>
+          <h4>Precios Justos</h4>
+          <p>Excelente relación entre la más alta calidad y su economía.</p>
+        </div>
+      </div>
+
+      <div class="pie-maestros">
+        <h3>Maestros Carniceros San Juan</h3>
+        <p>Comprometidos con su mesa diaria.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- pie de pagina -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="cuadricula-pie">
+        <div class="marca-pie">
+          <h3><i class="fa-solid fa-bullhorn icono-dorado"></i> San Juan</h3>
+          <p>Manteniendo viva la tradición del buen comer con los mejores cortes de carne fresca y atención familiar desde hace más de dos décadas.</p>
+        </div>
+
+<div class="columna-pie">
+          <h4>ENLACES</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <!-- Este enlace a productos estaba roto, ya está arreglado -->
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <!-- Enlace oculto para entrar a tu panel -->
+            <li><a href="Altabasbajas.html" style="color: var(--fondo-dorado); margin-top: 15px; display: inline-block;">Panel Admin <i class="fa-solid fa-lock"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>UBICACIÓN Y CONTACTO</h4>
+          <div class="item-contacto">
+            <i class="fa-solid fa-location-dot"></i>
+            <a href="https://maps.app.goo.gl/FMjFikNgSgRAGsMU9"><span>Calle de las fuentes #310 Fidel Velázquez Aguascalientes, Aguascalientes</span> </a>
+          </div>
+          <div class="item-contacto">
+            <i class="fa-solid fa-phone"></i>
+            <span>(449) 912-3456</span>
+          </div>
+          <div class="item-contacto">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contacto@carniceriasanjuan.com</span>
+          </div>
+        </div>
+
+        <div class="columna-pie">
+          <h4>HORARIO DE ATENCIÓN</h4>
+          <p class="texto-horario">
+            Lunes a Sábado:<br>
+            <strong>7:00 AM – 8:00 PM</strong>
+          </p>
+          <p class="texto-horario">
+            Domingo:<br>
+            <strong>8:00 AM – 3:00 PM</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="redes-sociales">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

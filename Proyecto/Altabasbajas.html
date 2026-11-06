@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - San Juan Carnicería Selecta</title>
+    <!-- RUTA CORREGIDA -->
+    <link rel="stylesheet" href="css/alltabajas.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="contenedor-principal">
+        <aside class="barra-lateral">
+            <div class="logo-contenedor">
+                <div class="icono-logo"><span class="material-symbols-outlined">shield</span></div>
+                <div class="texto-logo">
+                    <span class="nombre-marca">San Juan</span>
+                    <span class="tipo-negocio">CARNICERÍA<br>SELECTA</span>
+                </div>
+            </div>
+
+            <div class="selector-sucursal">
+                <span class="etiqueta-sucursal">Sucursal</span>
+                <div class="sucursal-actual">
+                    <span>Matriz Centro</span>
+                    <span class="material-symbols-outlined">unfold_more</span>
+                </div>
+            </div>
+
+            <!-- MENÚ ENLAZADO -->
+            <nav class="menu-navegacion">
+                <a href="index.html" class="item-menu">
+                    <span class="material-symbols-outlined">home</span>
+                    Inicio
+                </a>
+                <a href="Altabasbajas.html" class="item-menu activo">
+                    <span class="material-symbols-outlined">inventory_2</span>
+                    Catálogo y<br>Productos
+                </a>
+                <a href="#" class="item-menu">
+                    <span class="material-symbols-outlined">campaign</span>
+                    Banners y<br>Promociones
+                </a>
+                <a href="contacto.html" class="item-menu">
+                    <span class="material-symbols-outlined">mail</span>
+                    Mensajes de<br>Contacto
+                </a>
+                <a href="nosotros.html" class="item-menu">
+                    <span class="material-symbols-outlined">storefront</span>
+                    Información del<br>Negocio
+                </a>
+            </nav>
+
+            <div class="estado-sincronizacion">
+                <span class="indicador-estado activo"></span>
+                <span class="texto-estado">Catálogo Web Sincronizado</span>
+            </div>
+            <div class="version-app">v2.4 Backoffice</div>
+        </aside>
+
+        <main class="contenido-principal">
+            <header class="cabecera-superior">
+                <div class="buscador-global">
+                    <span class="material-symbols-outlined icono-buscar">search</span>
+                    <input type="text" placeholder="Buscar corte, lote o SKU...">
+                </div>
+                
+                <div class="acciones-usuario">
+                    <!-- BOTÓN ENLAZADO AL INICIO -->
+                    <a href="index.php" class="btn-sitio-web" style="text-decoration: none;">
+                        <span class="material-symbols-outlined">open_in_new</span>
+                        Ver Sitio Web
+                    </a>
+                    
+                    <div class="perfil-usuario">
+                        <div class="info-usuario">
+                            <span class="nombre-usuario">Don Andrés</span>
+                            <span class="rol-usuario">ADMINISTRADOR</span>
+                        </div>
+                        <div class="avatar-usuario"><span class="material-symbols-outlined">person</span></div>
+                    </div>
+                        <a href="logout.php" class="btn-salir" style="text-decoration: none;">
+                            <span class="material-symbols-outlined">logout</span>
+                        </a>                
+                    </div>
+            </header>
+
+            <section class="encabezado-seccion">
+                <div class="titulos-seccion">
+                    <div class="etiqueta-modulo">
+                        <h2>MÓDULO CENTRAL WEB</h2>
+                        <span class="badge-operaciones">Operaciones Directas</span>
+                    </div>
+                    <h1 class="titulo-principal">Catálogo Web: Altas, Bajas, Cambios y Consultas</h1>
+                    <p class="descripcion-seccion">Gestiona directamente la visibilidad, modificaciones de precio y despublicación o bajas definitivas del menú online.</p>
+                </div>
+                
+                <div class="botones-accion-principal">
+                    <button class="btn-secundario"><span class="material-symbols-outlined">download</span>Exportar<br>Catálogo</button>
+                    <button class="btn-primario"><span class="material-symbols-outlined">add_circle</span>+ Alta de<br>Nuevo Producto</button>
+                </div>
+            </section>
+
+            <!-- Tarjetas de Resumen (KPIs) -->
+            <section class="tarjetas-resumen">
+                <div class="tarjeta-kpi">
+                    <div class="cabecera-kpi">
+                        <span class="titulo-kpi">TOTAL<br>PRODUCTOS</span>
+                        <div class="icono-kpi fondo-gris"><span class="material-symbols-outlined">layers</span></div>
+                    </div>
+                    <div class="valor-kpi">24</div>
+                    <div class="descripcion-kpi">En catálogo general</div>
+                </div>
+                <div class="tarjeta-kpi destacada-verde">
+                    <div class="cabecera-kpi">
+                        <span class="titulo-kpi">PUBLICADOS EN<br>SITIO</span>
+                        <div class="icono-kpi fondo-verde-claro"><span class="material-symbols-outlined color-verde">visibility</span></div>
+                    </div>
+                    <div class="valor-kpi color-verde">20</div>
+                    <div class="descripcion-kpi color-verde">Visibles para compra y<br>cotización</div>
+                </div>
+                <div class="tarjeta-kpi destacada-amarillo">
+                    <div class="cabecera-kpi">
+                        <span class="titulo-kpi">DESTACADOS EN<br>PORTADA</span>
+                        <div class="icono-kpi fondo-amarillo-claro"><span class="material-symbols-outlined color-amarillo">star</span></div>
+                    </div>
+                    <div class="valor-kpi color-amarillo">6</div>
+                    <div class="descripcion-kpi color-amarillo">Carrusel principal de la<br>web</div>
+                </div>
+                <div class="tarjeta-kpi">
+                    <div class="cabecera-kpi">
+                        <span class="titulo-kpi">EN BORRADOR /<br>INACTIVOS</span>
+                        <div class="icono-kpi fondo-gris"><span class="material-symbols-outlined">description</span></div>
+                    </div>
+                    <div class="valor-kpi">4</div>
+                    <div class="descripcion-kpi">Pausados o en revisión<br>técnica</div>
+                </div>
+            </section>
+
+            <!-- Filtros de Tabla -->
+            <section class="barra-filtros">
+                <div class="grupo-filtros">
+                    <div class="buscador-tabla">
+                        <span class="material-symbols-outlined">search</span>
+                        <input type="text" placeholder="Buscar por corte, SKU o código...">
+                    </div>
+                    <div class="selector-filtro"><select><option>Todas las categorías</option></select></div>
+                    <div class="selector-filtro"><select><option>Todos los estatus</option></select></div>
+                </div>
+                <div class="info-resultados">
+                    <span>Mostrando 5 de 24 productos</span>
+                    <button class="btn-limpiar-filtros"><span class="material-symbols-outlined">refresh</span>Limpiar filtros</button>
+                </div>
+            </section>
+
+            <!-- Tabla de Datos -->
+            <section class="contenedor-tabla">
+                <table class="tabla-productos">
+                    <thead>
+                        <tr>
+                            <th class="col-checkbox"><input type="checkbox"></th>
+                            <th class="col-foto">FOTO / SKU</th>
+                            <th class="col-producto">PRODUCTO Y<br>CATEGORÍA</th>
+                            <th class="col-precio">PRECIO<br>PÚBLICO REF.</th>
+                            <th class="col-destacado">DESTACADO EN<br>PORTADA</th>
+                            <th class="col-estatus">ESTATUS WEB</th>
+                            <th class="col-acciones">ACCIONES DIRECTAS</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Fila 1 -->
+                        <tr>
+                            <td class="col-checkbox"><input type="checkbox"></td>
+                            <td class="col-foto-sku">
+                                <img src="https://via.placeholder.com/40" alt="Tomahawk" class="img-producto">
+                                <div class="info-sku"><span class="codigo-sku">CORTE-004</span><span class="id-producto">ID #1042</span></div>
+                            </td>
+                            <td class="col-producto-desc">
+                                <span class="nombre-producto">Tomahawk Steak Angus</span>
+                                <span class="categoria-producto"><span class="punto-categoria"></span> Cortes de Res • Marmoleo High Choice</span>
+                            </td>
+                            <td class="col-precio-info">
+                                <span class="precio-valor">$640.00 / kg</span>
+                                <span class="etiqueta-visible-web"><span class="material-symbols-outlined icono-pequeno">visibility</span> Visible en web</span>
+                            </td>
+                            <td class="col-destacado-info">
+                                <span class="badge-destacado si"><span class="material-symbols-outlined icono-pequeno">star</span> Sí (Portada)</span>
+                            </td>
+                            <td class="col-estatus-info">
+                                <span class="badge-estatus publicado"><span class="punto-estatus"></span> Publicado</span>
+                            </td>
+                            <td class="col-acciones-botones">
+                                <button class="btn-accion-modificar"><span class="material-symbols-outlined icono-pequeno">edit</span> Modificar / Cambiar</button>
+                                <button class="btn-accion-baja"><span class="material-symbols-outlined icono-pequeno">delete</span> Dar de baja</button>
+                            </td>
+                        </tr>
+                        <!-- Fila 2 -->
+                        <tr>
+                            <td class="col-checkbox"><input type="checkbox"></td>
+                            <td class="col-foto-sku">
+                                <img src="https://via.placeholder.com/40" alt="Rib Eye" class="img-producto">
+                                <div class="info-sku"><span class="codigo-sku">CORTE-002</span><span class="id-producto">ID #1038</span></div>
+                            </td>
+                            <td class="col-producto-desc">
+                                <span class="nombre-producto">Rib Eye Calidad Sonora</span>
+                                <span class="categoria-producto"><span class="punto-categoria"></span> Cortes de Res • Grano seleccionado</span>
+                            </td>
+                            <td class="col-precio-info">
+                                <span class="precio-valor">$420.00 / kg</span>
+                                <span class="etiqueta-visible-web"><span class="material-symbols-outlined icono-pequeno">visibility</span> Visible en web</span>
+                            </td>
+                            <td class="col-destacado-info">
+                                <span class="badge-destacado si"><span class="material-symbols-outlined icono-pequeno">star</span> Sí (Portada)</span>
+                            </td>
+                            <td class="col-estatus-info">
+                                <span class="badge-estatus publicado"><span class="punto-estatus"></span> Publicado</span>
+                            </td>
+                            <td class="col-acciones-botones">
+                                <button class="btn-accion-modificar"><span class="material-symbols-outlined icono-pequeno">edit</span> Modificar / Cambiar</button>
+                                <button class="btn-accion-baja"><span class="material-symbols-outlined icono-pequeno">delete</span> Dar de baja</button>
+                            </td>
+                        </tr>
+                        <!-- Fila 3 -->
+                        <tr>
+                            <td class="col-checkbox"><input type="checkbox"></td>
+                            <td class="col-foto-sku">
+                                <img src="https://via.placeholder.com/40" alt="Arrachera" class="img-producto">
+                                <div class="info-sku"><span class="codigo-sku">CORTE-001</span><span class="id-producto">ID #1021</span></div>
+                            </td>
+                            <td class="col-producto-desc">
+                                <span class="nombre-producto">Arrachera Marinada Selecta</span>
+                                <span class="categoria-producto"><span class="punto-categoria rojo"></span> Cortes de Res • Receta de la Casa</span>
+                            </td>
+                            <td class="col-precio-info">
+                                <span class="precio-valor">$285.00 / kg</span>
+                                <span class="etiqueta-visible-web"><span class="material-symbols-outlined icono-pequeno">visibility</span> Visible en web</span>
+                            </td>
+                            <td class="col-destacado-info">
+                                <span class="badge-destacado si"><span class="material-symbols-outlined icono-pequeno">star</span> Sí (Portada)</span>
+                            </td>
+                            <td class="col-estatus-info">
+                                <span class="badge-estatus publicado"><span class="punto-estatus"></span> Publicado</span>
+                            </td>
+                            <td class="col-acciones-botones">
+                                <button class="btn-accion-modificar"><span class="material-symbols-outlined icono-pequeno">edit</span> Modificar / Cambiar</button>
+                                <button class="btn-accion-baja"><span class="material-symbols-outlined icono-pequeno">delete</span> Dar de baja</button>
+                            </td>
+                        </tr>
+                        <!-- Fila 4 -->
+                        <tr>
+                            <td class="col-checkbox"><input type="checkbox"></td>
+                            <td class="col-foto-sku">
+                                <img src="https://via.placeholder.com/40" alt="Costillar" class="img-producto">
+                                <div class="info-sku"><span class="codigo-sku">CERD-015</span><span class="id-producto">ID #1066</span></div>
+                            </td>
+                            <td class="col-producto-desc">
+                                <span class="nombre-producto">Costillar de Cerdo BBQ</span>
+                                <span class="categoria-producto"><span class="punto-categoria naranja"></span> Cerdo • Baby Back Ribs Adobadas</span>
+                            </td>
+                            <td class="col-precio-info">
+                                <span class="precio-valor">$195.00 / kg</span>
+                                <span class="etiqueta-visible-web"><span class="material-symbols-outlined icono-pequeno">visibility</span> Visible en web</span>
+                            </td>
+                            <td class="col-destacado-info">
+                                <span class="badge-destacado no"><span class="material-symbols-outlined icono-pequeno">star</span> No</span>
+                            </td>
+                            <td class="col-estatus-info">
+                                <span class="badge-estatus publicado"><span class="punto-estatus"></span> Publicado</span>
+                            </td>
+                            <td class="col-acciones-botones">
+                                <button class="btn-accion-modificar"><span class="material-symbols-outlined icono-pequeno">edit</span> Modificar / Cambiar</button>
+                                <button class="btn-accion-baja"><span class="material-symbols-outlined icono-pequeno">delete</span> Dar de baja</button>
+                            </td>
+                        </tr>
+                        <!-- Fila 5 -->
+                        <tr>
+                            <td class="col-checkbox"><input type="checkbox"></td>
+                            <td class="col-foto-sku">
+                                <img src="https://via.placeholder.com/40" alt="Chorizo" class="img-producto">
+                                <div class="info-sku"><span class="codigo-sku">EMB-008</span><span class="id-producto">ID #1014</span></div>
+                            </td>
+                            <td class="col-producto-desc">
+                                <span class="nombre-producto">Chorizo Artesanal de la Casa</span>
+                                <span class="categoria-producto"><span class="punto-categoria rojo"></span> Embutidos • 100% pierna de cerdo</span>
+                            </td>
+                            <td class="col-precio-info">
+                                <span class="precio-valor">$145.00 / kg</span>
+                                <span class="etiqueta-visible-web oculto"><span class="material-symbols-outlined icono-pequeno">visibility_off</span> Oculto / Consultar</span>
+                            </td>
+                            <td class="col-destacado-info">
+                                <span class="badge-destacado no"><span class="material-symbols-outlined icono-pequeno">star</span> No</span>
+                            </td>
+                            <td class="col-estatus-info">
+                                <span class="badge-estatus borrador"><span class="punto-estatus"></span> Borrador</span>
+                            </td>
+                            <td class="col-acciones-botones">
+                                <button class="btn-accion-modificar"><span class="material-symbols-outlined icono-pequeno">edit</span> Modificar / Cambiar</button>
+                                <button class="btn-accion-baja"><span class="material-symbols-outlined icono-pequeno">delete</span> Dar de baja</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <footer class="pie-pagina-tabla">
+                <div class="resumen-productos">
+                    <span>Productos en Web: </span><span class="texto-negrita color-vino">20 Publicados / 4 Borradores</span>
+                </div>
+                <div class="paginacion-info">
+                    <span class="divisor-vertical"></span><span>Página 1 de 5</span>
+                </div>
+                <div class="controles-paginacion">
+                    <button class="btn-pagina texto">Anterior</button>
+                    <button class="btn-pagina numero activo">1</button>
+                    <button class="btn-pagina numero">2</button>
+                    <button class="btn-pagina numero">3</button>
+                    <button class="btn-pagina numero">4</button>
+                    <button class="btn-pagina texto">Siguiente</button>
+                </div>
+            </footer>
+        </main>
+    </div>
+</body>
+</html>

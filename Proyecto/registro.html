@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/inicio_sesión.css">
+    <link rel="stylesheet" href="css/gonzalo.css">
+    <title>Crear Cuenta - Carnicería San Juan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <section class="contenedor-datos">
+        <div class="linea"></div>
+        <div class="info">
+            <div class="loguito">
+                <i class="fa-solid fa-user-plus"></i>
+            </div>
+            <span class="etiqueta-subtitulo">TRADICIÓN & MAESTRÍA</span>
+            <div class="texto-marca">
+                <h1>SAN JUAN</h1>
+                <span class="sub-marca">CARNICERÍA</span>
+            </div>
+
+            <div class="encabezado-login">
+                <h2>Crear Cuenta</h2>
+                <p>Regístrate para acceder a nuestros servicios</p>
+            </div>
+
+            <form class="formulario-login" id="formRegistro">
+                <div class="grupo-input">
+                    <label for="usuario">Nombre de Usuario</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Ej. juan_perez" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="correo">Correo Electrónico</label>
+                    <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
+                </div>
+
+                <div class="grupo-input">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" name="password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" class="boton-ingresar">Registrarse</button>
+
+                <div style="text-align: center; margin-top: 15px;">
+                    <a href="inicio_de_sesion.html" style="color: #8b0000; text-decoration: none; font-size: 14px;">¿Ya tienes cuenta? Inicia sesión aquí</a>
+                </div>
+            </form>
+
+            <div id="mensajeRegistro" style="margin-top: 15px; text-align: center; font-weight: 500;"></div>
+        </div>
+    </section>
+
+    <footer class="footer-login">
+        <p>Registro de Usuarios  •  Carnicería San Juan</p>
+    </footer>
+
+    <!-- Script en JavaScript para enviar el registro por Fetch -->
+    <script>
+        document.getElementById('formRegistro').addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            const usuario = document.getElementById('usuario').value;
+            const correo = document.getElementById('correo').value;
+            const password = document.getElementById('password').value;
+            const mensaje = document.getElementById('mensajeRegistro');
+
+            mensaje.style.color = '#333';
+            mensaje.textContent = 'Procesando registro...';
+
+            try {
+                const respuesta = await fetch('registrar_usuario.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ usuario, correo, password })
+                });
+
+                const resultado = await respuesta.json();
+
+                if (resultado.exito) {
+                    mensaje.style.color = 'green';
+                    mensaje.textContent = resultado.mensaje;
+                    setTimeout(() => {
+                        window.location.href = 'login.html';
+                    }, 2000);
+                } else {
+                    mensaje.style.color = 'red';
+                    mensaje.textContent = resultado.mensaje;
+                }
+            } catch (error) {
+                console.error("Error:", error);
+                mensaje.style.color = 'red';
+                mensaje.textContent = 'Error al conectar con el servidor.';
+            }
+        });
+    </script>
+</body>
+</html>

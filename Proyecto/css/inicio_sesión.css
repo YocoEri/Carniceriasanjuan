@@ -1,0 +1,209 @@
+body {
+    background-color: #FFF8F7;
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: #2b2b2b;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-datos {
+    width: 100%;
+    max-width: 480px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    margin: 60px auto 20px auto;
+    border: 1px solid #EAE4DA;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    overflow: hidden;
+}
+
+.linea {
+    width: 100%;
+    background-color: #6B1E21;
+    height: 4px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 40px;
+    text-align: center;
+}
+
+.loguito {
+    font-size: 22px;
+    background-color: #6B1E21;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(107, 30, 33, 0.2);
+}
+
+.etiqueta-subtitulo {
+    color: #c59b5f;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.texto-marca h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 26px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color: #6B1E21;
+    margin: 0;
+}
+
+.sub-marca {
+    font-size: 11px;
+    color: #73706d;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 2px;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.sub-marca::before, .sub-marca::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 1px;
+    background-color: #d1c7bd;
+}
+.sub-marca::before { right: 105%; }
+.sub-marca::after { left: 105%; }
+
+.encabezado-login {
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+.encabezado-login h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #141214;
+    margin-bottom: 6px;
+}
+
+.encabezado-login p {
+    font-size: 13px;
+    color: #73706d;
+    margin: 0;
+}
+
+.formulario-login {
+    width: 100%;
+    text-align: left;
+}
+
+.grupo-input {
+    margin-bottom: 18px;
+}
+
+.grupo-input label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #2b2b2b;
+    margin-bottom: 8px;
+}
+
+.label-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.olvicon {
+    font-size: 12px;
+    color: #6B1E21;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.olvicon:hover {
+    text-decoration: underline;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 12px 14px;
+    background-color: #faf6f5;
+    border: 1px solid #ebdcd6;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #2b2b2b;
+    box-sizing: border-box;
+}
+
+.grupo-input input:focus {
+    outline: none;
+    border-color: #6B1E21;
+    background-color: #fff;
+}
+
+.grupo-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 22px;
+    font-size: 13px;
+    color: #555;
+}
+
+.grupo-checkbox input {
+    accent-color: #6B1E21;
+    width: 16px;
+    height: 16px;
+}
+
+.boton-ingresar {
+    width: 100%;
+    background-color: #6B1E21;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.boton-ingresar:hover {
+    background-color: #54171a;
+}
+
+.footer-login {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 12px;
+    color: #73706d;
+}
+
+.footer-login p {
+    margin-bottom: 6px;
+}
+
+@media (max-width: 500px) {
+    .contenedor-datos { width: 90%; margin: 30px auto 20px auto; }
+    .info { padding: 25px 20px; }
+    .texto-marca h1 { font-size: 22px; }
+    .sub-marca::before, .sub-marca::after { width: 20px; }
+}

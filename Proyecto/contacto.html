@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto - Carnicería San Juan</title>
+
+  <!-- fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- iconos -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- estilos generales y estilos específicos de contacto -->
+  <link rel="stylesheet" href="css/gonzalo.css">
+  <link rel="stylesheet" href="css/contacto.css">
+</head>
+<body>
+
+  <!-- menu de navegacion -->
+  <header class="encabezado">
+    <div class="contenedor contenedor-navegacion">
+      <div class="marca">
+        <div class="icono-logo">
+          <i class="fa-solid fa-shield"></i>
+        </div>
+        <div class="texto-marca">
+          <h1>SAN JUAN</h1>
+          <span>CARNICERÍA</span>
+        </div>
+      </div>
+      <nav>
+        <ul class="enlaces-navegacion">
+          <li><a href="index.php" class="activo">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="productos.php">Productos</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+          
+          <?php if ($esAdmin): ?>
+              <li><a href="Altabasbajas.html" style="color: var(--fondo-dorado, #d4af37);">Panel Admin</a></li>
+          <?php endif; ?>
+        </ul>
+      </nav>
+      
+
+      <a href="tel:4499123456" class="boton-telefono">
+        <i class="fa-solid fa-phone"></i> (449) 912-3456
+      </a>
+    </div>
+  </header>
+
+  <!-- banner de la seccion de contacto -->
+  <section class="banner-contacto-pagina">
+    <div class="contenedor">
+      <span class="etiqueta-subtitulo">— ESTAMOS PARA SERVIRLES</span>
+      <h1 class="titulo-principal-contacto">Contáctanos</h1>
+    </div>
+  </section>
+
+  <!-- seccion principal: formulario e informacion de sucursal -->
+  <section class="seccion-contacto">
+    <div class="contenedor cuadricula-contacto">
+      
+      <div class="tarjeta-formulario">
+        <h2>Envíenos un Mensaje</h2>
+        <p class="subtitulo-formulario">¿Tiene dudas sobre disponibilidad, pedidos de eventos o sugerencias? Complete el formulario.</p>
+        
+        <form action="guardar_mensaje.php" method="POST" onsubmit="return validarFormulario()">
+          <div class="grupo-formulario">
+            <label for="nombre">NOMBRE COMPLETO *</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="telefono">TELÉFONO DE CONTACTO *</label>
+            <input type="tel" id="telefono" name="telefono">
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="correo">CORREO ELECTRÓNICO</label>
+            <input type="email" id="correo" name="correo">
+          </div>
+
+          <div class="grupo-formulario">
+            <label for="mensaje">MENSAJE *</label>
+            <textarea id="mensaje" name="mensaje" rows="5"></textarea>
+          </div>
+
+          <button type="submit" class="boton-primario boton-enviar">Enviar Mensaje</button>
+        </form>
+      </div>
+
+      <!-- informacion de la sucursal -->
+      <div class="info-sucursal">
+        <h2>Información de la Sucursal</h2>
+        <p class="subtitulo-info">Le esperamos con gusto. Contamos con estacionamiento al frente y todas las medidas de sanidad para brindarle un servicio impecable.</p>
+
+        <ul class="lista-info">
+          <li>
+            <div class="icono-info"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>DIRECCIÓN</strong>
+              <p>De las fuentes #310 Fidel Velázquez<br>Aguascalientes, Aguascalientes</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="icono-info"><i class="fa-solid fa-phone"></i></div>
+            <div>
+              <strong>TELÉFONO DIRECTO</strong>
+              <p>(449) 912-3456</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="icono-info"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <strong>HORARIO COMPLETO</strong>
+              <p>Lunes a Sábado: 7:00 AM - 8:00 PM<br>Domingo: 8:00 AM - 3:00 PM</p>
+            </div>
+          </li>
+
+          <li>
+            <div class="icono-info"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>CORREO DE ATENCIÓN</strong>
+              <p>contacto@carniceriasanjuan.com</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- pie de pagina -->
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <div class="cuadricula-pie">
+        <div class="marca-pie">
+          <h3><i class="fa-solid fa-bullhorn icono-dorado"></i> San Juan</h3>
+          <p>Manteniendo viva la tradición del buen comer con los mejores cortes de carne fresca y atención familiar desde hace más de dos décadas.</p>
+        </div>
+
+        <div class="columna-pie">
+          <h4>ENLACES</h4>
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="productos.html">Productos</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="mensajes.php" style="color: var(--fondo-dorado); margin-top: 15px; display: inline-block;">Ver Mensajes <i class="fa-solid fa-table"></i></a></li>
+          </ul>
+        </div>
+
+        <div class="columna-pie">
+          <h4>UBICACIÓN Y CONTACTO</h4>
+          <div class="item-contacto">
+            <i class="fa-solid fa-location-dot"></i>
+            <a href="https://maps.app.goo.gl/FMjFikNgSgRAGsMU9" target="_blank">Calle de las fuentes #310 Fidel Velázquez Aguascalientes, Aguascalientes</a>
+          </div>
+          <div class="item-contacto">
+            <i class="fa-solid fa-phone"></i>
+            <span>(449) 912-3456</span>
+          </div>
+          <div class="item-contacto">
+            <i class="fa-solid fa-envelope"></i>
+            <span>contacto@carniceriasanjuan.com</span>
+          </div>
+        </div>
+
+        <div class="columna-pie">
+          <h4>HORARIO DE ATENCIÓN</h4>
+          <p class="texto-horario">
+            Lunes a Sábado:<br>
+            <strong>7:00 AM – 8:00 PM</strong>
+          </p>
+          <p class="texto-horario">
+            Domingo:<br>
+            <strong>8:00 AM – 3:00 PM</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="redes-sociales">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Java Script-->
+  <script>
+    function validarFormulario() {
+      var nombre = document.getElementById("nombre").value;
+      var telefono = document.getElementById("telefono").value;
+      var mensaje = document.getElementById("mensaje").value;
+
+      if (nombre === "") {
+        alert("Por favor, escribe tu nombre completo.");
+        return false; 
+      }
+
+      if (telefono === "") {
+        alert("Por favor, escribe tu teléfono de contacto.");
+        return false; 
+      }
+
+      if (mensaje === "") {
+        alert("Por favor, escribe un mensaje.");
+        return false; 
+      }
+
+      return true;
+    }
+  </script>
+
+</body>
+</html>
